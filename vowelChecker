@@ -1,0 +1,21 @@
+public class VowelChecker {
+    public static void main(String[] args) {
+        String str = "Enter a string here"; // Replace with user input if needed
+        int vowelCount = 0;
+        boolean hasVowels = false;
+        for (char c : str.toLowerCase().toCharArray()) {
+            if (vowels(c)) {
+                vowelCount++;
+                hasVowels = true;
+            }
+        }
+        if (hasVowels) {
+            System.out.println("The string contains " + vowelCount + " vowels.");
+        } else {
+            System.out.println("The string does not contain any vowels.");
+        }
+    }
+    public static boolean vowels(char c) {
+        return "aeiouAEIOU".indexOf(c) != -1;
+    }
+}
